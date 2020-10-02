@@ -5,34 +5,30 @@ class Register extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            users: [],
             username: '',
             password: '',
             repassword: '',
-            registered: false
         }
-        this.onChange = this.onChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
 
-    onChange(e) {
-        this.setState({
-            [e.target.username]: e.target.value,
-            [e.target.password]: e.target.value,
-            [e.target.repassword]: e.target.value
-        })
+    componentDidMount() {
+        fetch('http://localhost3000/users')
+            .then(response => response.json())
+            .then(response => this.setState({users: response.data}))
+            .catch(error => console.log(error))
     }
 
-    submitForm(e) {
-        e.preventDefault();
-        this.setState({
-            registered: true
-        });
+    submitForm() {
+        const {username, password} = this.state;
+        fetch(`http://localhost:3000/users/register?username=${username}&password=${password}`)
+            .then(response => this.setState({users: response.data}))
+            .catch(error => console.log(error))
     }
     
     render() {
-        if(this.state.registered) {
-            return <Redirect to='/home' />
-        }
+        console.log(this.state.users);
         return (
             <div className="row centered-form">
                 <div className="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
@@ -45,7 +41,7 @@ class Register extends Component {
                                     <div className="form-group">
                                         <input type="text" 
                                         value= {this.state.username}
-                                        onChange= {this.onChange}
+                                        onChange={(e) => this.setState({username: e.target.value})}
                                         name="username" id="username" className="form-control input-sm" placeholder="Username" />
                                     </div>
                                 <div className="row">
@@ -53,7 +49,7 @@ class Register extends Component {
                                         <div className="form-group">
                                             <input type="password" 
                                             value= {this.state.password}
-                                            onChange= {this.onChange}
+                                            onChange={(e) => this.setState({password: e.target.value})}
                                             name="password" id="password" className="form-control input-sm" placeholder="Password" />
                                         </div>
                                     </div>
@@ -61,7 +57,7 @@ class Register extends Component {
                                         <div className="form-group">
                                         <input type="password" 
                                         value= {this.state.repassword}
-                                        onChange= {this.onChange}
+                                        onChange={(e) => this.setState({repassword: e.target.value})}
                                         name="password_confirmation" id="password_confirmation" className="form-control input-sm" placeholder="Confirm Password" />
                                         </div>
                                     </div>

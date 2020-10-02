@@ -9,18 +9,11 @@ class Login extends Component {
             password: '',
             loggedIn: false
         }
-        this.onChange = this.onChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
 
-    onChange(tam){
-        this.setState({
-            [tam.target.name]: tam.target.value
-        })
-    }
-
-    submitForm(tam){
-        tam.preventDefault()
+    submitForm(e){
+        e.preventDefault()
         const {username, password} = this.state
         if(username === "vic" && password === "123") {
             localStorage.setItem("token", "testing");
@@ -42,7 +35,7 @@ class Login extends Component {
                         <label>Username</label>
                         <input 
                         value= {this.state.username}
-                        onChange={this.onChange}
+                        onChange={(e) => this.setState({username: e.target.value})}
                         name="username"
                         type="text" className="form-control input-sm" placeholder="Username" />
                     </div>
@@ -50,7 +43,7 @@ class Login extends Component {
                         <label>Password</label>
                         <input
                         value= {this.state.password}
-                        onChange={this.onChange}
+                        onChange={(e) => this.setState({password: e.target.value})}
                         name="password"
                         type="password" className="form-control input-sm" placeholder="Password" />
                     </div>
