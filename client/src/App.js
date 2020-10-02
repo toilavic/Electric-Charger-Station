@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { Switch, Route, Link } from "react-router-dom";
+import Login from './components/Login';
+import Guest from './components/Guest';
+import Register from './components/Register';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isShowButton: false
+        };
+        this.handleShow = this.handleShow.bind(this);
+    }
+
+    handleShow() {
+        this.setState({
+            isShowButton: !this.state.isShowButton
+        });
+    }
+    
+    render() {
+        let {isShowButton} = this.state;
+        let elmForm = null;
+        if(isShowButton === false) {
+                elmForm =   <div>
+                                <button onClick={this.handleShow} type="button" className="btn btn-medium btn-success"><Link to="/login">Login</Link></button>
+                                <button onClick={this.handleShow} type="button" className="btn btn-medium btn-success"><Link to="/register">Register</Link></button>
+                                <button onClick={this.handleShow} type="button" className="btn btn-medium btn-success"><Link to="/guest">Using Withou Account</Link></button>
+                            </div>
+        }
+        console.log(this.state.isShowButton);
+
+        return (
+            <div>
+                <div className="page-header">
+                    <h1>Electric Charger Station</h1>
+                </div>
+                    {elmForm}
+                    <Switch>
+                        <Route path="/login" component={Login}/>
+                        <Route path="/register" component={Register}/>
+                        <Route path="/guest" component={Guest}/>
+                    </Switch>
+            </div>
+
+        );
+    }
 }
 
 export default App;
