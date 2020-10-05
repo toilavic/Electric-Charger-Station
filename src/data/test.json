@@ -1,0 +1,176 @@
+{
+
+"data": [
+    {
+        "id": 1,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 2,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.017505,
+        "Longitude": 25.481491,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 3,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 4,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 5,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 6,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 7,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 8,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 9,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 10,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 11,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 12,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 13,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 14,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 15,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 16,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    },
+    {
+        "id": 17,
+        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "Latitude": 65.0094,
+        "Longitude": 25.51445,
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+    }
+
+]
+}
