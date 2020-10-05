@@ -9,65 +9,61 @@ class Register extends Component {
             username: '',
             password: '',
             repassword: '',
+            registeredIn: false
         }
         this.submitForm = this.submitForm.bind(this);
     }
 
-    componentDidMount() {
-        fetch('http://localhost3000/users')
-            .then(response => response.json())
-            .then(response => this.setState({users: response.data}))
-            .catch(error => console.log(error))
-    }
+    submitForm(e) {
+        e.preventDefault()
+        const {username, password, repassword} = this.state;
+        if( username === "" || password === "" || repassword === "") {
+            alert("Please fill the form");
+        }
 
-    submitForm() {
-        const {username, password} = this.state;
-        fetch(`http://localhost:3000/users/register?username=${username}&password=${password}`)
-            .then(response => this.setState({users: response.data}))
-            .catch(error => console.log(error))
+        else {
+            if(repassword===password) {
+                fetch(`http://localhost:3001/users/register?username=${username}&password=${password}`)
+                    .then(response => this.setState({users: response.data}))
+                    .catch(error => console.log(error))
+                this.setState({
+                    registeredIn: true
+                })
+            }
+            else {
+                alert("Password is not the same");
+            }
+        }
     }
     
     render() {
-        console.log(this.state.users);
+        const {registeredIn} = this.state;
+        console.log(registeredIn);
+        if( registeredIn === true) {
+            return <Redirect to="/login" />
+        }
         return (
-            <div className="row centered-form">
-                <div className="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
-                    <div className="panel panel-default">
-                        <div className="panel-heading">
-                            <h3 className="panel-title">Please sign up here <small>It's free!</small></h3>
-                        </div>
-                        <div className="panel-body">
-                            <form role="form">
-                                    <div className="form-group">
-                                        <input type="text" 
-                                        value= {this.state.username}
-                                        onChange={(e) => this.setState({username: e.target.value})}
-                                        name="username" id="username" className="form-control input-sm" placeholder="Username" />
-                                    </div>
-                                <div className="row">
-                                    <div className="col-xs-6 col-sm-6 col-md-6">
-                                        <div className="form-group">
-                                            <input type="password" 
-                                            value= {this.state.password}
-                                            onChange={(e) => this.setState({password: e.target.value})}
-                                            name="password" id="password" className="form-control input-sm" placeholder="Password" />
-                                        </div>
-                                    </div>
-                                    <div className="col-xs-6 col-sm-6 col-md-6">
-                                        <div className="form-group">
-                                        <input type="password" 
-                                        value= {this.state.repassword}
-                                        onChange={(e) => this.setState({repassword: e.target.value})}
-                                        name="password_confirmation" id="password_confirmation" className="form-control input-sm" placeholder="Confirm Password" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" defaultValue="Register" className="btn btn-info btn-block">Register</button>
-                            </form>
-                        </div>
+                <form>
+                    <div>
+                        <label className="col-sm-2">Username</label>
+                        <input type="text" value= {this.state.username}
+                        onChange={(e) => this.setState({username: e.target.value})}
+                        name="username" id="username" className="input-sm" placeholder="Username" />
                     </div>
-                </div>
-            </div>
+                    <div>
+                        <label className="col-sm-2">Password</label>
+                        <input type="password" value= {this.state.password}
+                        onChange={(e) => this.setState({password: e.target.value})}
+                        name="password" id="password" className="input-sm" placeholder="Password" />
+                    </div>
+                    <div>
+                        <label className="col-sm-2">Password Confirm</label>
+                        <input type="password" value= {this.state.repassword}
+                        onChange={(e) => this.setState({repassword: e.target.value})}
+                        name="repassword" id="repassword" className="input-sm" placeholder="Password" />
+                    </div>
+                    <button onClick={this.submitForm} type="submit" className="btn btn-info">Register</button>
+                </form>
         );
     }
 }

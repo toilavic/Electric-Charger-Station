@@ -33,16 +33,14 @@ class Login extends Component {
                 <form onSubmit={this.submitForm}>
                     <div className="form-group">
                         <label>Username</label>
-                        <input 
-                        value= {this.state.username}
+                        <input value= {this.state.username}
                         onChange={(e) => this.setState({username: e.target.value})}
                         name="username"
                         type="text" className="form-control input-sm" placeholder="Username" />
                     </div>
                     <div className="form-group">
                         <label>Password</label>
-                        <input
-                        value= {this.state.password}
+                        <input value= {this.state.password}
                         onChange={(e) => this.setState({password: e.target.value})}
                         name="password"
                         type="password" className="form-control input-sm" placeholder="Password" />
