@@ -2,9 +2,10 @@ import React from 'react';
 import ReactMapGL, {Marker, Popup, NavigationControl} from "react-map-gl";
 import data from '../data/test.json';
 import NavbarMap from './NavbarMap'
-import Geocoder from 'react-map-gl-geocoder'
+
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoidG9pbGF2aWMiLCJhIjoiY2tmamN5aTNsMGNoMjMzbXB4cWM4MjdtcyJ9.OVmr_4vFr40bm1pVWqhpZQ";
+
 export default class Map extends React.Component {
 
     constructor(props) {
@@ -18,27 +19,17 @@ export default class Map extends React.Component {
         height: '100vh'
       },
       data,
-      activeMarker : null,
-      selectedPlace: null,
-      showingInfoWindow: false,
+      onshowingInfoWindow : true
     }
     }
-    
-    async onMarkerClick(point) {
-        await this.setState({
-        selectedPlace: point,
-        activeMarker: point,
-        showingInfoWindow: true
-        });
-        console.log(this.state.selectedPlace)
-
+    // get maker event from parent
+    onMarkerClick(point) {
+        this.props.onMarkerClick(point);
     }
-  
     
     render() {
-
-    var {selectedPlace} = this.state
-        
+    // point selected
+    var selectedPlace = this.props.onSelectedPoint
     return (
       <div>
         {/* Render a map */}
@@ -47,7 +38,11 @@ export default class Map extends React.Component {
                                   onViewportChange={(viewport) => {this.setState({viewport: viewport})}}
                                   mapStyle="mapbox://styles/toilavic/ckfjda0ux0mct19nwm0cw9cqb"
         >
-        <div><NavbarMap/></div>
+
+       {/* Navbar navigator */}
+        <div><NavbarMap onshowingInfoWindow={this.state.onshowingInfoWindow}/></div>
+        
+        
         {/* render electric charger points */}
         { this.state.data.data.map(point => (
 
@@ -88,8 +83,9 @@ export default class Map extends React.Component {
                 </div>
                 
             </Popup>
-           ) : null}
-        
+        ) : null}
+
+        {/* Navigator btn*/}
         <div className="navControl">
             <NavigationControl />
         </div>

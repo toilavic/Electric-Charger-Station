@@ -10,7 +10,9 @@ function Navbar() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
-
+  // function onshowingInfoWindow(e) {
+  //   console
+  // }
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
