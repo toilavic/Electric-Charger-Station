@@ -30,7 +30,6 @@ class App extends Component {
                                 <button onClick={this.handleShow} type="button" className="btn btn-medium btn-success"><Link to="/guest">Using Withou Account</Link></button>
                             </div>
         }
-        console.log(this.state.isShowButton);
 
         return (
             <div>
