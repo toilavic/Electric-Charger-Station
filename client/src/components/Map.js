@@ -3,6 +3,15 @@ import ReactMapGL, {Marker, Popup, NavigationControl} from "react-map-gl";
 import data from '../data/test.json';
 import NavbarMap from './NavbarMap'
 import { BsLightningFill } from "react-icons/bs";
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxPopover,
+  ComboboxList,
+  ComboboxOption,
+  ComboboxOptionText,
+} from "@reach/combobox";
+import "@reach/combobox/styles.css";
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoidG9pbGF2aWMiLCJhIjoiY2tmamN5aTNsMGNoMjMzbXB4cWM4MjdtcyJ9.OVmr_4vFr40bm1pVWqhpZQ";
@@ -20,38 +29,79 @@ export default class Map extends React.Component {
         height: '100vh'
       },
       data,
-      onshowingInfoWindow : true
+      onshowingInfoWindow : false,
+      search: ""
     }
     }
     // get maker event from parent
-    onMarkerClick(point) {
+    async onMarkerClick(point) {
         this.props.onMarkerClick(point);
+        await this.setState({onshowingInfoWindow: true})
     }
-    
+     
+    onCloseSide = () => {
+      
+        this.setState({onshowingInfoWindow: !this.state.onshowingInfoWindow})
+      
+    }
+
+    updateSearch = (event) => {
+      this.setState({search: event.target.value.substr(0,20)});
+    }
+
+    selectedValue = (e) => {
+      const viewport = {
+      ...this.state.viewport, latitude: e.Latitude, longitude: e.Longitude, zoom: 20}
+      this.setState({viewport});
+    }
+    onViewportChange = viewport => {
+      this.setState({viewport});
+    };
     render() {
-    // point selected
+   
+
+    let filteredContacts = this.state.data.data.filter(
+      (location) => {
+        return location.chargerName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+      }
+    );
+    console.log(this.state.viewport)
+    console.log(filteredContacts)
     var selectedPlace = this.props.onSelectedPoint
     return (
       <div>
         {/* Render a map */}
-        
         <ReactMapGL {...this.state.viewport} mapboxApiAccessToken={MAPBOX_TOKEN}
-                                  onViewportChange={(viewport) => {this.setState({viewport: viewport})}}
+                                  onViewportChange={this.onViewportChange}
                                   mapStyle="mapbox://styles/toilavic/ckfjda0ux0mct19nwm0cw9cqb"
         >
 
        {/* Navbar navigator */}
-        <div><NavbarMap onshowingInfoWindow={this.state.onshowingInfoWindow}/></div>
-        
-        
+        <div><NavbarMap onshowingInfoWindow={this.state.onshowingInfoWindow}
+                        onReceivePoint={selectedPlace}
+                        onCloseSide = { 
+                              this.onCloseSide.bind(this)
+                        }
+                         
+        /></div>
+        <div>
+      <Combobox>
+        <ComboboxInput aria-labelledby="demo" value={this.state.search} onChange={this.updateSearch.bind(this)} />
+        <ComboboxPopover>
+          <ComboboxList aria-labelledby="demo">
+          {filteredContacts.map((e) => <ComboboxOption value={e.chargerName} onClick={() => this.selectedValue(e)} />)}   
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
         {/* render electric charger points */}
-        { this.state.data.data.map(point => (
+        { filteredContacts.map(point => (
 
          <Marker
             key={point.id}
             latitude={point.Latitude}
             longitude = {point.Longitude}
-            onClick={this.onMarkerClick}
+
          >
              {/* render button */}
            <button className="marker-btn" onClick={(e) => {
@@ -73,14 +123,9 @@ export default class Map extends React.Component {
               longitude={selectedPlace.Longitude}
               onClose={() => this.setState({selectedPlace:null})}
             >
+              
                 <div style={{borderRadius: '20%'}}>
-                        <h2>{selectedPlace.chargerName}</h2>
-                          <p>Address: {selectedPlace.AddressLine1}, {selectedPlace.AddressLine2}</p>
-                          <p>Connection: {selectedPlace.Connections.length}</p>
-                          <p>Connector type: {selectedPlace.connector}</p>
-                          <p>Price: {selectedPlace.price}</p>
-                          <p>Power: {selectedPlace.power}</p>
-                          
+                        <h>Selected</h>      
                 </div>
                 
             </Popup>

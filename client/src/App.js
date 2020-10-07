@@ -30,7 +30,6 @@ class App extends Component {
         activeMarker: point,
         showingInfoWindow: true
         });
-        console.log(this.state.selectedPlace)
     }
     
     render() {
