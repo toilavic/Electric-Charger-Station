@@ -20,7 +20,6 @@ class Register extends Component {
         if( username === "" || password === "" || repassword === "") {
             alert("Please fill the form");
         }
-
         else {
             if(repassword===password) {
                 fetch(`http://localhost:3001/users/register?username=${username}&password=${password}`)
