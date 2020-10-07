@@ -1,0 +1,82 @@
+.tooltip {
+    position: relative;
+    box-sizing: border-box;
+  }
+  .tooltip:after,
+  .tooltip:before {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    box-sizing: border-box;
+  }
+  .tooltip:after {
+    content: attr(data-tooltip);
+    background: rgba(0,0,0,0.5);
+    top: 100%;
+    margin-top: 22px;
+    padding: 10px;
+    color: #fff;
+    line-height: 1.5;
+    width: 250px;
+    margin-left: -125px;
+    border-radius: 4px;
+  }
+  .tooltip:before {
+    content: "";
+    top: 100%;
+    margin-top: 12px;
+    margin-left: -5px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(0,0,0,0.5);
+  }
+  .tooltip:hover:after,
+  .tooltip:hover:before {
+    -webkit-transition: all 400ms ease 200ms;
+    transition: all 400ms ease 200ms;
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip:hover:after {
+    margin-top: 15px;
+  }
+  .tooltip:hover:before {
+    margin-top: 5px;
+  }
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+    background: #d1adcf;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #d1adcf), color-stop(100%, #6393c1));
+    background: -webkit-linear-gradient(-45deg, #d1adcf 0%, #6393c1 100%);
+    background: -webkit-linear-gradient(315deg, #d1adcf 0%, #6393c1 100%);
+    background: linear-gradient(135deg, #d1adcf 0%, #6393c1 100%);
+  }
+  .demo {
+    width: 160px;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(255,255,255,0.6);
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+    top: 45%;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-family: Verdana;
+    color: #000;
+    box-shadow: 0px 2px 0px 1px rgba(0,0,0,0.1);
+  }
+  .demo:before,
+  .demo:after {
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-family: Arial, helvetica, sans-serif;
+  }
+  

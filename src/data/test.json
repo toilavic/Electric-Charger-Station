@@ -4,173 +4,1936 @@
     {
         "id": 1,
         "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "AddressLine1": "Kiviharjuntie 5",
+        "AddressLine2": null,
+        "Town": "Kontinkangas",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90220",
         "Latitude": 65.0094,
         "Longitude": 25.51445,
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
-        "Status":"Free"
+        "Status":"Free",
+        
+        "Connections": [
+            {
+                "ID": 34304,
+                "ConnectionTypeID": 0,
+                "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+                },
+                "Reference": "1",
+                "StatusTypeID": null,
+                "StatusType": null,
+                "LevelID": 2,
+                "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+                },
+                "Amps": 16,
+                "Voltage": 230,
+                "PowerKW": 3.7,
+                "CurrentTypeID": null,
+                "CurrentType": null,
+                "Quantity": null,
+                "Comments": "Mode 1"
+            },
+            {
+                "ID": 87654,
+                "ConnectionTypeID": 0,
+                "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+                },
+                "Reference": "2",
+                "StatusTypeID": null,
+                "StatusType": null,
+                "LevelID": 2,
+                "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+                },
+                "Amps": 16,
+                "Voltage": 230,
+                "PowerKW": 3.7,
+                "CurrentTypeID": null,
+                "CurrentType": null,
+                "Quantity": null,
+                "Comments": "Mode 1"
+            },
+            {
+                "ID": 89500,
+                "ConnectionTypeID": 0,
+                "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+                },
+                "Reference": "3",
+                "StatusTypeID": null,
+                "StatusType": null,
+                "LevelID": 2,
+                "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+                },
+                "Amps": 16,
+                "Voltage": 230,
+                "PowerKW": 3.7,
+                "CurrentTypeID": null,
+                "CurrentType": null,
+                "Quantity": null,
+                "Comments": "Mode 1"
+            }
+            ]
     },
     {
         "id": 2,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
+        "chargerName": "Oulun Energian toimitalon piha",
         "Latitude": 65.017505,
         "Longitude": 25.481491,
+        "AddressLine1": "Kasarmintie 6",
+        "AddressLine2": null,
+        "Town": "Raksila",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90130",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
-        "Status":"Free"
+        "Status":"Free",
+        "Connections": [
+            {
+              "ID": 34306,
+              "ConnectionTypeID": 0,
+              "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+              },
+              "Reference": null,
+              "StatusTypeID": null,
+              "StatusType": null,
+              "LevelID": 2,
+              "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+              },
+              "Amps": 16,
+              "Voltage": 230,
+              "PowerKW": 3.68,
+              "CurrentTypeID": null,
+              "CurrentType": null,
+              "Quantity": null,
+              "Comments": null
+            },
+            {
+              "ID": 226253,
+              "ConnectionTypeID": 0,
+              "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+              },
+              "Reference": "1",
+              "StatusTypeID": null,
+              "StatusType": null,
+              "LevelID": 2,
+              "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+              },
+              "Amps": 16,
+              "Voltage": 230,
+              "PowerKW": 3.7,
+              "CurrentTypeID": null,
+              "CurrentType": null,
+              "Quantity": null,
+              "Comments": "Mode 1"
+            }
+          ]
     },
     {
         "id": 3,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "Kivisydän",
+        "Latitude": 65.01227,
+        "Longitude": 25.47637,
+        "AddressLine1": "Hallituskatu 20",
+        "AddressLine2": null,
+        "Town": "Oulu Keskus",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90100",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
-        "Status":"Free"
+        "Status":"Free",
+        "Connections": [
+            {
+              "ID": 71520,
+              "ConnectionTypeID": 0,
+              "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+              },
+              "Reference": null,
+              "StatusTypeID": null,
+              "StatusType": null,
+              "LevelID": 2,
+              "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+              },
+              "Amps": 16,
+              "Voltage": 230,
+              "PowerKW": 3.68,
+              "CurrentTypeID": null,
+              "CurrentType": null,
+              "Quantity": null,
+              "Comments": null
+            },
+            {
+              "ID": 87657,
+              "ConnectionTypeID": 0,
+              "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+              },
+              "Reference": "1",
+              "StatusTypeID": null,
+              "StatusType": null,
+              "LevelID": 2,
+              "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+              },
+              "Amps": 32,
+              "Voltage": 400,
+              "PowerKW": 22.0,
+              "CurrentTypeID": null,
+              "CurrentType": null,
+              "Quantity": null,
+              "Comments": "Mode 3"
+            },
+            {
+              "ID": 89502,
+              "ConnectionTypeID": 0,
+              "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+              },
+              "Reference": null,
+              "StatusTypeID": null,
+              "StatusType": null,
+              "LevelID": 2,
+              "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+              },
+              "Amps": 16,
+              "Voltage": 230,
+              "PowerKW": 3.68,
+              "CurrentTypeID": null,
+              "CurrentType": null,
+              "Quantity": null,
+              "Comments": null
+            },
+            {
+              "ID": 226250,
+              "ConnectionTypeID": 0,
+              "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+              },
+              "Reference": "2",
+              "StatusTypeID": null,
+              "StatusType": null,
+              "LevelID": 2,
+              "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+              },
+              "Amps": 32,
+              "Voltage": 400,
+              "PowerKW": 22.0,
+              "CurrentTypeID": null,
+              "CurrentType": null,
+              "Quantity": null,
+              "Comments": "Mode 3"
+            },
+            {
+              "ID": 226251,
+              "ConnectionTypeID": 0,
+              "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+              },
+              "Reference": null,
+              "StatusTypeID": null,
+              "StatusType": null,
+              "LevelID": 2,
+              "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+              },
+              "Amps": 16,
+              "Voltage": 230,
+              "PowerKW": 3.68,
+              "CurrentTypeID": null,
+              "CurrentType": null,
+              "Quantity": null,
+              "Comments": null
+            },
+            {
+              "ID": 226252,
+              "ConnectionTypeID": 0,
+              "ConnectionType": {
+                "FormalName": "Not Specified",
+                "IsDiscontinued": null,
+                "IsObsolete": null,
+                "ID": 0,
+                "Title": "Unknown"
+              },
+              "Reference": "3",
+              "StatusTypeID": null,
+              "StatusType": null,
+              "LevelID": 2,
+              "Level": {
+                "Comments": "Over 2 kW, usually non-domestic socket type",
+                "IsFastChargeCapable": false,
+                "ID": 2,
+                "Title": "Level 2 : Medium (Over 2kW)"
+              },
+              "Amps": 32,
+              "Voltage": 400,
+              "PowerKW": 22.0,
+              "CurrentTypeID": null,
+              "CurrentType": null,
+              "Quantity": null,
+              "Comments": "Mode 3"
+            }
+          ]
     },
     {
         "id": 4,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "Lapland Hotels Oulu",
+        "Latitude": 65.015344,
+        "Longitude": 25.475991,
+        "AddressLine1": "Kirkkokatu 3",
+        "AddressLine2": null,
+        "Town": "Oulu",
+        "StateOrProvince": null,
+        "Postcode": "90100",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
-        "Status":"Free"
+        "Status":"Free",
+        
+        "Connections": [
+        {
+            "ID": 140786,
+            "ConnectionTypeID": 30,
+            "ConnectionType": {
+            "FormalName": null,
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 30,
+            "Title": "Tesla (Model S/X)"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": 400,
+            "PowerKW": 22.0,
+            "CurrentTypeID": 20,
+            "CurrentType": {
+            "Description": "Alternating Current - Three Phase",
+            "ID": 20,
+            "Title": "AC (Three-Phase)"
+            },
+            "Quantity": 2,
+            "Comments": null
+        }
+        ]
     },
     {
         "id": 5,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "P-Stockmann / Oulu",
+        "Latitude": 65.01134,
+        "Longitude": 25.46974,
+        "AddressLine1": "Kirkkokatu 14",
+        "AddressLine2": null,
+        "Town": "Oulu Keskus",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90100",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 34305,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 16,
+            "Voltage": 230,
+            "PowerKW": 3.7,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 1"
+        },
+        {
+            "ID": 87655,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "2",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 16,
+            "Voltage": 230,
+            "PowerKW": 3.7,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 1"
+        },
+        {
+            "ID": 87656,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "3",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 16,
+            "Voltage": 230,
+            "PowerKW": 3.7,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 1"
+        },
+        {
+            "ID": 89501,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "4",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 16,
+            "Voltage": 230,
+            "PowerKW": 3.7,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 1"
+        }
+        ]
     },
     {
         "id": 6,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "ABC Prisma Limingantulli",
+        "Latitude": 64.99615,
+        "Longitude": 25.46193,
+        "AddressLine1": "Nuottasaarentie 1",
+        "AddressLine2": null,
+        "Town": "Äimärautio",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90400",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 226248,
+            "ConnectionTypeID": 2,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration AA",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 2,
+            "Title": "CHAdeMO"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": 100,
+            "Voltage": 500,
+            "PowerKW": 50.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": null,
+            "Comments": "Mode 4"
+        },
+        {
+            "ID": 226249,
+            "ConnectionTypeID": 25,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-2 Type 2",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 25,
+            "Title": "Type 2 (Socket Only)"
+            },
+            "Reference": "2",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": 63,
+            "Voltage": 400,
+            "PowerKW": 43.0,
+            "CurrentTypeID": 20,
+            "CurrentType": {
+            "Description": "Alternating Current - Three Phase",
+            "ID": 20,
+            "Title": "AC (Three-Phase)"
+            },
+            "Quantity": null,
+            "Comments": "Mode 3"
+        }
+        ]
     },
     {
         "id": 7,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "Tyrnäväntie",
+        "Latitude": 64.9977160090185,
+        "Longitude": 25.4578675959101,
+        "AddressLine1": "Tyrnäväntie",
+        "AddressLine2": "Limingantulli",
+        "Town": "Oulu",
+        "StateOrProvince": "Oulun seutukunta",
+        "Postcode": "90120",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 187783,
+            "ConnectionTypeID": 2,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration AA",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 2,
+            "Title": "CHAdeMO"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": 50.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 1,
+            "Comments": null
+        },
+        {
+            "ID": 187784,
+            "ConnectionTypeID": 32,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration EE",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 32,
+            "Title": "CCS (Type 1)"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": 50.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 1,
+            "Comments": null
+        }
+        ]
     },
     {
         "id": 8,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "ABC Prisma Limingantulli",
+        "Latitude": 64.9941428394985,
+        "Longitude": 25.461836250206016,
+        "AddressLine1": "Nuottasaarentie",
+        "AddressLine2": "Limingantulli",
+        "Town": "Oulu",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90400",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 26516,
+            "ConnectionTypeID": 2,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration AA",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 2,
+            "Title": "CHAdeMO"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": null,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": null,
+            "Comments": null
+        },
+        {
+            "ID": 26517,
+            "ConnectionTypeID": 33,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration FF",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 33,
+            "Title": "CCS (Type 2)"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": null,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": null,
+            "Comments": null
+        }
+        ]
     },
     {
         "id": 9,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "Nissan Peugeot Seat",
+        "Latitude": 64.99685,
+        "Longitude": 25.45798,
+        "AddressLine1": "Tyrnäväntie 7",
+        "AddressLine2": null,
+        "Town": "Äimärautio",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90400",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 34303,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 100,
+            "Voltage": 500,
+            "PowerKW": 50.0,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 4"
+        }
+        ]
     },
     {
         "id": 10,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "Laakeritie",
+        "Latitude": 65.03913063881376,
+        "Longitude": 25.554032951438444,
+        "AddressLine1": "Laakeritie",
+        "AddressLine2": "Rusko",
+        "Town": "Oulu",
+        "StateOrProvince": "Oulun seutukunta",
+        "Postcode": "90620",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 188590,
+            "ConnectionTypeID": 33,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration FF",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 33,
+            "Title": "CCS (Type 2)"
+            },
+            "Reference": null,
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": 50.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 2,
+            "Comments": null
+        },
+        {
+            "ID": 188594,
+            "ConnectionTypeID": 2,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration AA",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 2,
+            "Title": "CHAdeMO"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": 50.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 2,
+            "Comments": null
+        },
+        {
+            "ID": 188595,
+            "ConnectionTypeID": 1036,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-2",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 1036,
+            "Title": "Type 2 (Tethered Connector) "
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": 63,
+            "Voltage": 400,
+            "PowerKW": 43.0,
+            "CurrentTypeID": 20,
+            "CurrentType": {
+            "Description": "Alternating Current - Three Phase",
+            "ID": 20,
+            "Title": "AC (Three-Phase)"
+            },
+            "Quantity": 2,
+            "Comments": null
+        }
+        ]
     },
     {
         "id": 11,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "Satamatie",
+        "Latitude": 65.0352778076126,
+        "Longitude": 25.4418944419275,
+        "AddressLine1": "Satamatie",
+        "AddressLine2": "Toppila",
+        "Town": "Oulu",
+        "StateOrProvince": "Oulun seutukunta",
+        "Postcode": "90520",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 187786,
+            "ConnectionTypeID": 2,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration AA",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 2,
+            "Title": "CHAdeMO"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": 50.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 2,
+            "Comments": null
+        },
+        {
+            "ID": 187787,
+            "ConnectionTypeID": 32,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration EE",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 32,
+            "Title": "CCS (Type 1)"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": 50.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": null,
+            "Comments": null
+        },
+        {
+            "ID": 187788,
+            "ConnectionTypeID": 1036,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-2",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 1036,
+            "Title": "Type 2 (Tethered Connector) "
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": null,
+            "PowerKW": 22.0,
+            "CurrentTypeID": 20,
+            "CurrentType": {
+            "Description": "Alternating Current - Three Phase",
+            "ID": 20,
+            "Title": "AC (Three-Phase)"
+            },
+            "Quantity": 4,
+            "Comments": null
+        }
+        ]
     },
     {
         "id": 12,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "Delta Auto - Ensto Chago eFill",
+        "Latitude": 64.96293,
+        "Longitude": 25.51151,
+        "AddressLine1": "Pauketie 4",
+        "AddressLine2": null,
+        "Town": "Kaakkuri",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90410",
+        "CountryID": 79,
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 34301,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 16,
+            "Voltage": 230,
+            "PowerKW": 3.7,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 3"
+        }
+        ]
     },
     {
         "id": 13,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "K-Citymarket Oulu Kaakkuri",
+        "Latitude": 64.9571822924366,
+        "Longitude": 25.5284397050084,
+        "AddressLine1": "Metsokankaantie 5",
+        "AddressLine2": null,
+        "Town": "Mäntylä",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90420",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 102626,
+            "ConnectionTypeID": 25,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-2 Type 2",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 25,
+            "Title": "Type 2 (Socket Only)"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": 400,
+            "PowerKW": 22.0,
+            "CurrentTypeID": 20,
+            "CurrentType": {
+            "Description": "Alternating Current - Three Phase",
+            "ID": 20,
+            "Title": "AC (Three-Phase)"
+            },
+            "Quantity": null,
+            "Comments": "Mode 3"
+        },
+        {
+            "ID": 102627,
+            "ConnectionTypeID": 25,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-2 Type 2",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 25,
+            "Title": "Type 2 (Socket Only)"
+            },
+            "Reference": "2",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": 400,
+            "PowerKW": 22.0,
+            "CurrentTypeID": 20,
+            "CurrentType": {
+            "Description": "Alternating Current - Three Phase",
+            "ID": 20,
+            "Title": "AC (Three-Phase)"
+            },
+            "Quantity": null,
+            "Comments": "Mode 3"
+        },
+        {
+            "ID": 102628,
+            "ConnectionTypeID": 25,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-2 Type 2",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 25,
+            "Title": "Type 2 (Socket Only)"
+            },
+            "Reference": "3",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": 400,
+            "PowerKW": 22.0,
+            "CurrentTypeID": 20,
+            "CurrentType": {
+            "Description": "Alternating Current - Three Phase",
+            "ID": 20,
+            "Title": "AC (Three-Phase)"
+            },
+            "Quantity": null,
+            "Comments": "Mode 3"
+        },
+        {
+            "ID": 102629,
+            "ConnectionTypeID": 25,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-2 Type 2",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 25,
+            "Title": "Type 2 (Socket Only)"
+            },
+            "Reference": "4",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": 400,
+            "PowerKW": 22.0,
+            "CurrentTypeID": 20,
+            "CurrentType": {
+            "Description": "Alternating Current - Three Phase",
+            "ID": 20,
+            "Title": "AC (Three-Phase)"
+            },
+            "Quantity": null,
+            "Comments": "Mode 3"
+        },
+        {
+            "ID": 179467,
+            "ConnectionTypeID": 2,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration AA",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 2,
+            "Title": "CHAdeMO"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": 50.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 2,
+            "Comments": null
+        },
+        {
+            "ID": 179468,
+            "ConnectionTypeID": 33,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration FF",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 33,
+            "Title": "CCS (Type 2)"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": 50.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 2,
+            "Comments": null
+        }
+        ]
     },
     {
         "id": 14,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "VTT konttori Linnanmaalla",
+        "Latitude": 65.05661,
+        "Longitude": 25.45855,
+        "AddressLine1": "Kaitoväylä 1",
+        "AddressLine2": null,
+        "Town": "Kaijonharju-Linnanmaa",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90570",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 34307,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": null,
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 16,
+            "Voltage": 230,
+            "PowerKW": 3.68,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": null
+        },
+        {
+            "ID": 226254,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": 230,
+            "PowerKW": 7.4,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 3"
+        }
+        ]
     },
     {
         "id": 15,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "Pilot Business Park",
+        "Latitude": 64.93118044,
+        "Longitude": 25.3854529,
+        "AddressLine1": "lentokatu 2",
+        "AddressLine2": null,
+        "Town": "Oulunsalo Keskus",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90460",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 34300,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": null,
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 16,
+            "Voltage": 230,
+            "PowerKW": 3.68,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": null
+        },
+        {
+            "ID": 226247,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 16,
+            "Voltage": 230,
+            "PowerKW": 3.7,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 2"
+        }
+        ]
     },
     {
         "id": 16,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "McDonalds Kempele",
+        "Latitude": 64.90386049332974,
+        "Longitude":25.542823900866097,
+        "AddressLine1": "Myllytie 1",
+        "AddressLine2": null,
+        "Town": "Kempele",
+        "StateOrProvince": null,
+        "Postcode": "90450",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 255965,
+            "ConnectionTypeID": 33,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration FF",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 33,
+            "Title": "CCS (Type 2)"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": 225.0,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 2,
+            "Comments": null
+        }
+        ]
     },
     {
         "id": 17,
-        "chargerName": "Technopolis Sairaalaparkki Parkkihalli",
-        "Latitude": 65.0094,
-        "Longitude": 25.51445,
+        "chargerName": "Kempeleen Ekokortteli",
+        "Latitude": 64.90396,
+        "Longitude": 25.54693,
+        "AddressLine1": "Koivikkohaka 9",
+        "AddressLine2": null,
+        "Town": "Honkanen",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90450",
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 34298,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": null,
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 16,
+            "Voltage": 230,
+            "PowerKW": 3.68,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": null
+        },
+        {
+            "ID": 226219,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": 230,
+            "PowerKW": 7.4,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 3"
+        }
+        ]
     }
-
+    ,
+    {
+        "id": 18,
+        "chargerName": "OSAO Haukipudas F138h",
+        "Latitude": 65.19391,
+        "Longitude": 25.41201,
+        "AddressLine1": "Asemakyläntie 5",
+        "AddressLine2": null,
+        "Town": "Haukipudas Asemanseutu",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "90840",
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 107773,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": 400,
+            "PowerKW": 22.0,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 3"
+        },
+        {
+            "ID": 107774,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "2",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 100,
+            "Voltage": 500,
+            "PowerKW": 50.0,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 4"
+        },
+        {
+            "ID": 107775,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "3",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 100,
+            "Voltage": 500,
+            "PowerKW": 50.0,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 4"
+        }
+        ]
+    }
+    ,
+    {
+        "id": 19,
+        "chargerName": "Hesburger Liminka",
+        "Latitude": 64.80740637283958,
+        "Longitude": 25.45862651878167,
+        "AddressLine1": "Yritystie 1",
+        "AddressLine2": null,
+        "Town": "Liminka",
+        "StateOrProvince": null,
+        "Postcode": "91900",
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 188706,
+            "ConnectionTypeID": 33,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration FF",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 33,
+            "Title": "CCS (Type 2)"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": null,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 1,
+            "Comments": null
+        },
+        {
+            "ID": 188707,
+            "ConnectionTypeID": 2,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-3 Configuration AA",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 2,
+            "Title": "CHAdeMO"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 3,
+            "Level": {
+            "Comments": "40KW and Higher",
+            "IsFastChargeCapable": true,
+            "ID": 3,
+            "Title": "Level 3:  High (Over 40kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": null,
+            "CurrentTypeID": 30,
+            "CurrentType": {
+            "Description": "Direct Current",
+            "ID": 30,
+            "Title": "DC"
+            },
+            "Quantity": 1,
+            "Comments": null
+        },
+        {
+            "ID": 188708,
+            "ConnectionTypeID": 25,
+            "ConnectionType": {
+            "FormalName": "IEC 62196-2 Type 2",
+            "IsDiscontinued": false,
+            "IsObsolete": false,
+            "ID": 25,
+            "Title": "Type 2 (Socket Only)"
+            },
+            "Reference": null,
+            "StatusTypeID": 50,
+            "StatusType": {
+            "IsOperational": true,
+            "IsUserSelectable": true,
+            "ID": 50,
+            "Title": "Operational"
+            },
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": null,
+            "Voltage": null,
+            "PowerKW": null,
+            "CurrentTypeID": 20,
+            "CurrentType": {
+            "Description": "Alternating Current - Three Phase",
+            "ID": 20,
+            "Title": "AC (Three-Phase)"
+            },
+            "Quantity": 2,
+            "Comments": null
+        }
+        ]
+    }
+    ,
+    {
+        "id": 20,
+        "chargerName": "Micropolis, parkkipaikka",
+        "Latitude":  65.28825,
+        "Longitude": 25.3753,
+        "AddressLine1": "Piisilta 1",
+        "AddressLine2": null,
+        "Town": "Ii Keskus",
+        "StateOrProvince": "Pohjois-Pohjanmaa",
+        "Postcode": "91100",
+        "Comments": "Over 2 kW, usually non-domestic socket type",
+        "IsFastChargeCapable": false,
+        "Title": "Level 2 : Medium (Over 2kW)",
+        "Status":"Free"
+        ,
+        "Connections": [
+        {
+            "ID": 34308,
+            "ConnectionTypeID": 0,
+            "ConnectionType": {
+            "FormalName": "Not Specified",
+            "IsDiscontinued": null,
+            "IsObsolete": null,
+            "ID": 0,
+            "Title": "Unknown"
+            },
+            "Reference": "1",
+            "StatusTypeID": null,
+            "StatusType": null,
+            "LevelID": 2,
+            "Level": {
+            "Comments": "Over 2 kW, usually non-domestic socket type",
+            "IsFastChargeCapable": false,
+            "ID": 2,
+            "Title": "Level 2 : Medium (Over 2kW)"
+            },
+            "Amps": 32,
+            "Voltage": 400,
+            "PowerKW": 22.0,
+            "CurrentTypeID": null,
+            "CurrentType": null,
+            "Quantity": null,
+            "Comments": "Mode 3"
+        }
+        ] 
+    }
 ]
 }
