@@ -2,6 +2,7 @@ import React from 'react';
 import ReactMapGL, {Marker, Popup, NavigationControl} from "react-map-gl";
 import data from '../data/test.json';
 import NavbarMap from './NavbarMap'
+import { BsLightningFill } from "react-icons/bs";
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoidG9pbGF2aWMiLCJhIjoiY2tmamN5aTNsMGNoMjMzbXB4cWM4MjdtcyJ9.OVmr_4vFr40bm1pVWqhpZQ";
@@ -57,7 +58,7 @@ export default class Map extends React.Component {
               e.preventDefault();
               this.onMarkerClick(point)
            }}>
-             <img src="/icon.png"></img>
+             <BsLightningFill/>
            </button>
         </Marker>
         )) }
