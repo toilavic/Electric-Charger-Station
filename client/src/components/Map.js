@@ -8,8 +8,7 @@ import {
   ComboboxInput,
   ComboboxPopover,
   ComboboxList,
-  ComboboxOption,
-  ComboboxOptionText,
+  ComboboxOption
 } from "@reach/combobox";
 import "@reach/combobox/styles.css";
 
@@ -30,44 +29,54 @@ export default class Map extends React.Component {
       },
       data,
       onshowingInfoWindow : false,
-      search: ""
+      search: "",
+      selectedPoint: false
     }
     }
+
     // get maker event from parent
     async onMarkerClick(point) {
         this.props.onMarkerClick(point);
         await this.setState({onshowingInfoWindow: true})
     }
-     
+    
+    // close & open sidebar (INFO BAR)
     onCloseSide = () => {
-      
         this.setState({onshowingInfoWindow: !this.state.onshowingInfoWindow})
-      
     }
 
+    // search
     updateSearch = (event) => {
-      this.setState({search: event.target.value.substr(0,20)});
+      this.setState({search: event.target.value.substr(0,20),
+        selectedPoint: false
+      });
     }
 
-    selectedValue = (e) => {
+    // fly to selected point
+    async selectedValue(e) {
+      console.log(e)
       const viewport = {
-      ...this.state.viewport, latitude: e.Latitude, longitude: e.Longitude, zoom: 20}
-      this.setState({viewport});
+      ...this.state.viewport, latitude: e.Latitude, longitude: e.Longitude, zoom: 16}
+      await this.setState({viewport, selectedPoint: !this.state.selectedPoint}
+        );
     }
+
+    // change viewport of map func
     onViewportChange = viewport => {
       this.setState({viewport});
     };
+
     render() {
    
-
     let filteredContacts = this.state.data.data.filter(
       (location) => {
         return location.chargerName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
       }
     );
-    console.log(this.state.viewport)
-    console.log(filteredContacts)
+
     var selectedPlace = this.props.onSelectedPoint
+
+
     return (
       <div>
         {/* Render a map */}
@@ -79,55 +88,63 @@ export default class Map extends React.Component {
        {/* Navbar navigator */}
         <div><NavbarMap onshowingInfoWindow={this.state.onshowingInfoWindow}
                         onReceivePoint={selectedPlace}
-                        onCloseSide = { 
-                              this.onCloseSide.bind(this)
-                        }
+                        onCloseSide = {this.onCloseSide.bind(this)}
                          
         /></div>
-        <div>
-      <Combobox>
-        <ComboboxInput aria-labelledby="demo" value={this.state.search} onChange={this.updateSearch.bind(this)} />
-        <ComboboxPopover>
-          <ComboboxList aria-labelledby="demo">
-          {filteredContacts.map((e) => <ComboboxOption value={e.chargerName} onClick={() => this.selectedValue(e)} />)}   
-          </ComboboxList>
-        </ComboboxPopover>
-      </Combobox>
-    </div>
+        {/* search box */}
+        <div className="search">
+          <Combobox>
+              <ComboboxInput placeholder="Enter an address" value={this.state.search} onChange={this.updateSearch.bind(this)} />
+                <ComboboxPopover>
+                  <ComboboxList className={this.state.selectedPoint ? 'dropList' : ''}>
+                  {filteredContacts.map((item) => <ComboboxOption 
+                                                key = {item.id}
+                                                value={item.chargerName} 
+                                                onClick={() => {
+                                                  // change view
+                                                  this.selectedValue(item)
+                                                  //  send clicked point to parent state
+                                                  this.onMarkerClick(item)
+                                                  }
+                                                }
+                                                />)}   
+                </ComboboxList>
+              </ComboboxPopover>
+          </Combobox>
+        </div>
         {/* render electric charger points */}
         { filteredContacts.map(point => (
 
-         <Marker
+          <Marker
             key={point.id}
             latitude={point.Latitude}
             longitude = {point.Longitude}
-
          >
              {/* render button */}
            <button className="marker-btn" onClick={(e) => {
               e.preventDefault();
               this.onMarkerClick(point)
+              this.selectedValue(point)
            }}>
              <BsLightningFill/>
            </button>
-        </Marker>
-        )) }
 
+          </Marker>
+        ))}
 
         {/* check if there has been a selected Place */}
         {selectedPlace ? (
-            
             // details info box
             <Popup
               latitude={selectedPlace.Latitude}
               longitude={selectedPlace.Longitude}
               onClose={() => this.setState({selectedPlace:null})}
+              closeOnClick ={false}
+              
             >
               
-                <div style={{borderRadius: '20%'}}>
-                        <h>Selected</h>      
-                </div>
-                
+              <i className="glyphicon glyphicon-arrow-down"></i>
+              
             </Popup>
         ) : null}
 

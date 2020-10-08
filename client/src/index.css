@@ -1,10 +1,11 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
 }
 
 code {
@@ -16,7 +17,21 @@ code {
   width: 10px;
   height: 10px;
   border: 0rem;
+}
 
+.search {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  z-index: 10;
+}
+.search input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 /* Marker tweaks */
@@ -27,12 +42,9 @@ code {
 .mapboxgl-canvas {
   display: inline;
 }
-.mapboxgl-popup-content {
-  font: 400 10px/17px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
-  padding: 0;
-  width: 130px;
-  height: 200px;
-  border-radius: 100px 100px 0 0;
+
+.dropList {
+  display: none;
 }
 
 .mapboxgl-popup-content-wrapper {
