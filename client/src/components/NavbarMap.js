@@ -20,7 +20,7 @@ export default class Map extends React.Component {
   render() {
       var selectedPlace = this.props.onReceivePoint;
       // console.log(point)
-      
+      console.log(selectedPlace)
   return (
     <div>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -45,9 +45,17 @@ export default class Map extends React.Component {
                         <h2>{selectedPlace.chargerName}</h2>
                           <p>Address: {selectedPlace.AddressLine1}, {selectedPlace.AddressLine2}</p>
                           <p>Connection: {selectedPlace.Connections.length}</p>
-                          <p>Connector type: {selectedPlace.connector}</p>
-                          <p>Price: {selectedPlace.price}</p>
-                          <p>Power: {selectedPlace.power}</p>      
+                          
+                          {/* {selectedPlace.Connections.map((e, index) => <p key = {index}> Connector type: {e.Level.Comments}</p>)}
+                          {selectedPlace.Connections.map((e, index) => <p key = {index}> Type: {e.ConnectionType.Title}</p>)} */}
+
+                          {selectedPlace.Connections.map((e, index) => {
+                            return (<div key = {index}>
+                                    <p > Connector type: {e.Level.Comments}</p>,
+                                    <p > Type: {e.ConnectionType.Title}</p>
+                                    <p> Code: { e.ID}</p>
+                                    </div>
+                           ) })}
                 </div>
         ) : null}
         </ul> 

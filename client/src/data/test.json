@@ -15,7 +15,7 @@
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free",
-        
+        "Type": "Free",
         "Connections": [
             {
                 "ID": 34304,
@@ -117,6 +117,7 @@
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free",
+        "Type": "22W",
         "Connections": [
             {
               "ID": 34306,
@@ -190,6 +191,7 @@
         "IsFastChargeCapable": false,
         "Title": "Level 2 : Medium (Over 2kW)",
         "Status":"Free",
+        "Type": "150W",
         "Connections": [
             {
               "ID": 71520,
