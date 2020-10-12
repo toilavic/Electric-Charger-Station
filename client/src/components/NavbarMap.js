@@ -1,5 +1,4 @@
 import React  from 'react';
-import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import '../navbar.css';
@@ -24,13 +23,7 @@ export default class Map extends React.Component {
   return (
     <div>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <div className='navbar'>
-          <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={(this.showSidebar)} />
-            <FaIcons.FaSearch onClick={this.showSidebar} />
-          </Link>
-          
-        </div>
+        
         <nav className={this.props.onshowingInfoWindow ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items'>
             <li className='navbar-toggle'>

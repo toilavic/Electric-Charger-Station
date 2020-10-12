@@ -7,6 +7,8 @@ import Map from './components/Map';
 import Register from './components/Register';
 import Verify from './components/Verify';
 import Clock from './components/Clock';
+import Index from './components/Index'
+import Navbar from './components/Navbar'
 
 class App extends Component {
     constructor(props) {
@@ -99,24 +101,14 @@ class App extends Component {
     }
 
     render() {
-        let {isShowButton} = this.state;
-        let elmForm = null;
-        if(isShowButton === false) {
-                elmForm =   <div>
-                                <button onClick={this.handleShow} type="button" className="btn btn-medium btn-success"><Link to="/login">Login</Link></button>
-                                <button onClick={this.handleShow} type="button" className="btn btn-medium btn-success"><Link to="/register">Register</Link></button>
-                                <button onClick={this.handleShow} type="button" className="btn btn-medium btn-success"><Link to="/Map">Using Withou Account</Link></button>
-                            </div>
-        }
-
-        return (
-          
+        return ( 
           <Router>
-            {elmForm}
+            <Navbar/>
                 <div>
-                        <Route path="/login" exact render={ routeProps => <Login {...routeProps}/>}  />
-                        <Route path="/register" exact render={ routeProps => <Register {...routeProps}/>}  />
-                        <Route path="/Clock" exact render={ routeProps => <Clock  start={this.start} 
+                        <Route path="/" exact render={ routeProps => <Index {...routeProps}/>}  />
+                        <Route path="/login" render={ routeProps => <Login {...routeProps}/>}  />
+                        <Route path="/register" render={ routeProps => <Register {...routeProps}/>}  />
+                        <Route path="/Clock" render={ routeProps => <Clock  start={this.start} 
                         second={this.state.second} 
                         stop={this.stop} 
                         money={this.state.money} 
@@ -124,8 +116,8 @@ class App extends Component {
                         History={this.history}
                         {...routeProps}
                         />}  />
-                        <Route path="/verify" exact render={ routeProps => <Verify choosePlugger={this.choosePlugger} {...routeProps}/>}  />
-                        <Route path="/Map" exact render={ routeProps => <Map onMarkerClick={this.onMarkerClick}
+                        <Route path="/verify" render={ routeProps => <Verify choosePlugger={this.choosePlugger} {...routeProps}/>}  />
+                        <Route path="/Map" render={ routeProps => <Map onMarkerClick={this.onMarkerClick}
                                                                              onSelectedPoint={this.state.selectedPlace}
                         {...routeProps}/>}  />                        
                 </div>  
