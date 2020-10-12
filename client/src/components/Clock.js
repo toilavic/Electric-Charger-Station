@@ -1,21 +1,18 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 export default function Clock(props) {
-
-
 
     if (props.plugVerify === null)
     {
       alert('We cant find your code');
-      
-    }
-    else{
-    const getSecond = ()=>
+    } else
+    {
+      const getSecond = () =>
     {
       return('0' + props.second %60).slice(-2);
     }
-    const getMinute = ()=>
+
+    const getMinute = () =>
     {
       return ('0' + Math.floor(props.second / 60) %60).slice(-2);
     }
@@ -28,19 +25,17 @@ export default function Clock(props) {
 
    
   return(
-    <div><button onClick={() => props.history.goBack()}>Back</button>
     <div>
-    <div >{getHour()}:{getMinute()}:{getSecond()}</div>
-    <button  onClick={props.start}>Start</button>
-    <button  onClick={props.stop}>Stop</button>
-    <div>Your payment is: {money} e</div>
-    
-    
-    
-    </div>
-    <button type="submit" className="btn btn-default"
-                          onClick = {props.History}
-    >Submit</button>
+        <button onClick={() => props.history.goBack()}>Back</button>
+        <div>
+            <div >{getHour()}:{getMinute()}:{getSecond()}</div>
+            <button  onClick={props.start}>Start</button>
+            <button  onClick={props.stop}>Stop</button>
+            <div>Your payment is: {money} e</div>
+        </div>
+        <button type="submit" className="btn btn-default"
+                              onClick = {props.History}
+        >Submit</button>
     </div>
   )
 } 

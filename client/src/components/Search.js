@@ -1,6 +1,7 @@
 import React from 'react';
+import ReactMapGL, {Marker, Popup, NavigationControl} from "react-map-gl";
 import data from '../data/test.json';
-
+import NavbarMap from './NavbarMap'
 import { BsLightningFill } from "react-icons/bs";
 import {
   Combobox,
@@ -12,13 +13,14 @@ import {
 import "@reach/combobox/styles.css";
 
 
-
 export default class Map extends React.Component {
 
     constructor(props) {
     super(props);
     this.state = {
-      search: ""
+      search: "",
+      data,
+      selectedPoint: false
     }
     }
 
@@ -40,20 +42,6 @@ export default class Map extends React.Component {
       });
     }
 
-    // fly to selected point
-    async selectedValue(e) {
-      console.log(e)
-      const viewport = {
-      ...this.state.viewport, latitude: e.Latitude, longitude: e.Longitude, zoom: 16}
-      await this.setState({viewport, selectedPoint: !this.state.selectedPoint}
-        );
-    }
-
-    // change viewport of map func
-    onViewportChange = viewport => {
-      this.setState({viewport});
-    };
-
 
     render() {
    
@@ -68,14 +56,6 @@ export default class Map extends React.Component {
 
     return (
       <div>
-        {/* Render a map */}
-       
-       {/* Navbar navigator */}
-        <div><NavbarMap onshowingInfoWindow={this.state.onshowingInfoWindow}
-                        onReceivePoint={selectedPlace}
-                        onCloseSide = {this.onCloseSide.bind(this)}
-                         
-        /></div>
         {/* search box */}
         <div className="search">
           <Combobox>
@@ -97,25 +77,7 @@ export default class Map extends React.Component {
               </ComboboxPopover>
           </Combobox>
         </div>
-        {/* render electric charger points */}
-        { filteredContacts.map(point => (
 
-          <Marker
-            key={point.id}
-            latitude={point.Latitude}
-            longitude = {point.Longitude}
-         >
-             {/* render button */}
-           <button className="marker-btn" onClick={(e) => {
-              e.preventDefault();
-              this.onMarkerClick(point)
-              this.selectedValue(point)
-           }}>
-             <BsLightningFill/>
-           </button>
-
-          </Marker>
-        ))}
       </div>
     );
   }

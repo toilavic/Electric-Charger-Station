@@ -41,62 +41,54 @@ class App extends Component {
         showingInfoWindow: true
         });
     }
-    
+      
     choosePlugger = (event) => {
         event.preventDefault();
-        console.log(event.target["digit"].value)
-        console.log(this.state.data.data)
         let final = this.state.data.data.filter(e => e.id == event.target["digit"].value)
-        console.log(final)
         if(final){
             this.setState({verify: final})
         }
     }
-
+    // start charge
     start = (e) =>{
         e.preventDefault();
         var _this=this;
         if(this.state.timerStop){
-         
-        this.incrementer = setInterval(function(){
-          _this.setState({timerStarted: true, timerStop: false});
-          _this.setState({second:(_this.state.second + 1)});
-        },1000);
+          this.incrementer = setInterval(function(){
+            _this.setState({timerStarted: true, timerStop: false});
+            _this.setState({second:(_this.state.second + 1)});
+          },1000);
         }
     }
     
     stop = (e) =>{
-        e.preventDefault();
-        
-   
-        
-        let money;
-   let d = this.state.verify[0];
-   if(d.Type == "Free")
-   {
-       money = 0;
-       console.log("free")
-   }
-   else if(d.Type == "22W")
-     {
-       money =  0.2 * this.state.second/60 ;
-     }
-   
-   else if(d.Type === '150W')
-   {
-     money= 0.18 * this.state.second/3600;
-   }
-   this.setState({money:money});
-   this.setState({timerStarted: false, timerStop: true});
-   clearInterval(this.incrementer);
- 
-   console.log(this.state.timerStarted, this.state.timerStop)
+      e.preventDefault();
+      let money;
+      let digit = this.state.verify[0];
 
+      if(digit.Type == "Free")
+      {
+          money = 0;
+          console.log("free")
+      }
+      else if(digit.Type == "22W")
+      {
+        money =  0.2 * this.state.second/60 ;
+      }
+   
+      else if(digit.Type === '150W')
+      {
+        money= 0.18 * this.state.second/3600;
+      }
+
+    this.setState({money:money});
+    this.setState({timerStarted: false, timerStop: true});
+    clearInterval(this.incrementer);
 
     }
 
-
-    History = (e) => {
+    
+    history = (e) => {
         e.preventDefault();
         console.log('dc roi')
         // var date = date.Now();
@@ -105,9 +97,6 @@ class App extends Component {
         // this.setState({history})
         console.log(this.state.history)
     }
-
-
-
 
     render() {
         let {isShowButton} = this.state;
@@ -132,7 +121,7 @@ class App extends Component {
                         stop={this.stop} 
                         money={this.state.money} 
                         plugVerify={this.state.plugVerify}
-                        History={this.History}
+                        History={this.history}
                         {...routeProps}
                         />}  />
                         <Route path="/verify" exact render={ routeProps => <Verify choosePlugger={this.choosePlugger} {...routeProps}/>}  />

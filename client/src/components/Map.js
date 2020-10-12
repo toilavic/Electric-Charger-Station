@@ -41,8 +41,9 @@ export default class Map extends React.Component {
     }
     
     // close & open sidebar (INFO BAR)
-    onCloseSide = () => {
-        this.setState({onshowingInfoWindow: !this.state.onshowingInfoWindow})
+    async onCloseSide() {
+        await this.setState({onshowingInfoWindow: !this.state.onshowingInfoWindow, selectedPoint: false})
+        console.log(this.state.selectedPoint)
     }
 
     // search
