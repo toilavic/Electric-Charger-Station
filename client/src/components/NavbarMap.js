@@ -35,18 +35,18 @@ export default class Map extends React.Component {
             {selectedPlace ? (
             // details info box
                 <div style={{borderRadius: '20%'}}>
-                        <h2>{selectedPlace.chargerName}</h2>
-                          <p>Address: {selectedPlace.AddressLine1}, {selectedPlace.AddressLine2}</p>
-                          <p>Connection: {selectedPlace.Connections.length}</p>
+                        <h2 className="pointDetails">{selectedPlace.chargerName}</h2>
+                          <p  className="pointDetails">Address: {selectedPlace.AddressLine1}, {selectedPlace.AddressLine2}</p>
+                          <p  className="pointDetails">Connection: {selectedPlace.Connections.length}</p>
                           
                           {/* {selectedPlace.Connections.map((e, index) => <p key = {index}> Connector type: {e.Level.Comments}</p>)}
                           {selectedPlace.Connections.map((e, index) => <p key = {index}> Type: {e.ConnectionType.Title}</p>)} */}
 
                           {selectedPlace.Connections.map((e, index) => {
                             return (<div key = {index}>
-                                    <p > Connector type: {e.Level.Comments}</p>,
-                                    <p > Type: {e.ConnectionType.Title}</p>
-                                    <p> Code: { e.ID}</p>
+                                    <p className="pointDetails"> Connector type: {e.Level.Comments}</p>,
+                                    <p className="pointDetails"> Type: {e.ConnectionType.Title}</p>
+                                    <p className="pointDetails"> Code: { e.ID}</p>
                                     </div>
                            ) })}
                 </div>

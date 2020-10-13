@@ -19,6 +19,7 @@ export default class Navbar extends React.Component {
                     <ul className="navbar-nav ml-auto">
                       <li className="nav-item"><a className="nav-link js-scroll-trigger" href="Map"><b>Open Map</b></a></li>
                       <li className="nav-item"><a className="nav-link js-scroll-trigger" href="Login"><b>Login</b></a></li>
+                      <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#signup"><b>How it works ?</b></a></li>
                       <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#signup"><b>Contact</b></a></li>
                     </ul>
                   </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactMapGL, {Marker, Popup, NavigationControl} from "react-map-gl";
+import ReactMapGL, {Marker, Popup, NavigationControl,GeolocateControl} from "react-map-gl";
 import data from '../data/test.json';
 import NavbarMap from './NavbarMap'
 import { BsLightningFill } from "react-icons/bs";
@@ -43,7 +43,6 @@ export default class Map extends React.Component {
     // close & open sidebar (INFO BAR)
     async onCloseSide() {
         await this.setState({onshowingInfoWindow: !this.state.onshowingInfoWindow, selectedPoint: false})
-        console.log(this.state.selectedPoint)
     }
 
     // search
@@ -86,13 +85,15 @@ export default class Map extends React.Component {
                                   onViewportChange={this.onViewportChange}
                                   mapStyle="mapbox://styles/toilavic/ckfjda0ux0mct19nwm0cw9cqb"
         >
-
+         
        {/* Navbar navigator */}
         <div><NavbarMap onshowingInfoWindow={this.state.onshowingInfoWindow}
                         onReceivePoint={selectedPlace}
                         onCloseSide = {this.onCloseSide.bind(this)}
-                         
-        /></div>
+                  
+        />
+         
+        </div>
         {/* search box */}
         <div className="search">
           <Combobox>

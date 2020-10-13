@@ -4761,6 +4761,7 @@ input[type=button].btn-block {
 }
 a.badge:hover, a.badge:focus {
   text-decoration: none;
+ 
 }
 
 .badge:empty {
@@ -10157,9 +10158,11 @@ body {
   padding: 0.9rem 0;
 }
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(#fff, 80%);
+  color: black;
   outline: none;
-  background-color: transparent;
+  background-color: black;
+  height: 52px;
+  
 }
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
@@ -10167,14 +10170,13 @@ body {
 }
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 0;
-    padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    height: 45px;
+    /* background-color: transparent; */
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    padding: 0.5rem 0;
+    padding: 1.5rem 0;
     color: black;
   }
   #mainNav .nav-link {

@@ -9,15 +9,15 @@
  
   
   .menu-bars {
-    margin-left: 2rem;
-    margin-top: 6rem;
+    margin-left: 1rem;
+    margin-top: 4rem;
     font-size: 2rem;
     background: none;
   }
   
   .nav-menu {
     background-color: #060b26;
-    width: 250px;
+    width: 240px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -29,8 +29,10 @@
   
   .nav-menu.active {
     display: absolute;
+    padding-top: 0%;
+    height: 100%;
     left: 0;
-    transition: 350ms;
+    transition: 450ms;
   }
   
   .nav-text {
@@ -77,3 +79,39 @@
   /* span {
     margin-left: 16px;
   } */
+
+  .marker-btn {
+    border-radius: 1em;
+    border: none;
+    background-color:#A2FD85 ;
+  }
+
+  .search input {
+    border-radius: 0.8rem;
+    border: 1px solid #DADCE0;
+    background: #fff;
+  }
+
+  .search {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    z-index: 10;
+  }
+
+  .navControl {
+    position: absolute;
+    bottom: 33px;
+    z-index: 4;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .pointDetails {
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 15px ;
+  }   
