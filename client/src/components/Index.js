@@ -1,18 +1,10 @@
 import React  from 'react';
 import '../css/styles.css'
 export default class Index extends React.Component {  
-  constructor(props) {
-    super(props);
-    }
+  
     render() {
         return (
             <div>
-              <meta charSet="utf-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-              <meta name="description" content />
-              <meta name="author" content />
-              <title>Grayscale - Start Bootstrap Theme</title>
-              <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
               {/* Font Awesome icons (free version)*/}
               {/* Google fonts*/}
               <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />

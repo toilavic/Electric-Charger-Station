@@ -10139,6 +10139,10 @@ body {
   letter-spacing: 0.0625em;
 }
 
+.hidden {
+  display: none;
+}
+
 #mainNav {
   min-height: 3.5rem;
   background-color: #fff;

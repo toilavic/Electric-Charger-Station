@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link, Redirect } from "react-router-dom";
 export default function Clock(props) {
 
     if (props.plugVerify === null)
@@ -23,20 +23,28 @@ export default function Clock(props) {
     const money = Number(Math.round(props.money +'e2')+'e-2');
 
 
-   
-  return(
-    <div>
-        <button onClick={() => props.history.goBack()}>Back</button>
-        <div>
-            <div >{getHour()}:{getMinute()}:{getSecond()}</div>
-            <button  onClick={props.start}>Start</button>
-            <button  onClick={props.stop}>Stop</button>
-            <div>Your payment is: {money} e</div>
-        </div>
-        <button type="submit" className="btn btn-default"
-                              onClick = {props.History}
-        >Submit</button>
-    </div>
-  )
+  if(props.isAuthenticated) {
+    return(
+    
+      <div style={{marginTop: '100px', marginLeft: '100px'}}>
+          <button onClick={() => props.history.goBack()}>Back</button>
+          <div>
+              <div >{getHour()}:{getMinute()}:{getSecond()}</div>
+              <button  onClick={props.start}>Start</button>
+              <button  onClick={props.stop}>Stop</button>
+              <div>Your payment is: {money} e</div>
+          </div>
+          <button type="submit" className="btn btn-default"
+                                onClick = {props.History}
+          >Submit</button>
+      </div>
+    )
+  } else {
+      alert('You need to login ');
+        return(
+          <React.Fragment><Redirect to='/login' /></React.Fragment>
+      )    
+  }
+ 
 } 
 }

@@ -6,11 +6,6 @@ import { IconContext } from 'react-icons';
 
 export default class Map extends React.Component {  
 
-  
-  constructor(props) {
-    super(props);
-    }
-
   // close & open sidebar
   showSidebar = () => {
       this.props.onCloseSide();
@@ -36,19 +31,10 @@ export default class Map extends React.Component {
             // details info box
                 <div style={{borderRadius: '20%'}}>
                         <h2 className="pointDetails">{selectedPlace.chargerName}</h2>
-                          <p  className="pointDetails">Address: {selectedPlace.AddressLine1}, {selectedPlace.AddressLine2}</p>
-                          <p  className="pointDetails">Connection: {selectedPlace.Connections.length}</p>
-                          
-                          {/* {selectedPlace.Connections.map((e, index) => <p key = {index}> Connector type: {e.Level.Comments}</p>)}
-                          {selectedPlace.Connections.map((e, index) => <p key = {index}> Type: {e.ConnectionType.Title}</p>)} */}
-
-                          {selectedPlace.Connections.map((e, index) => {
-                            return (<div key = {index}>
-                                    <p className="pointDetails"> Connector type: {e.Level.Comments}</p>,
-                                    <p className="pointDetails"> Type: {e.ConnectionType.Title}</p>
-                                    <p className="pointDetails"> Code: { e.ID}</p>
-                                    </div>
-                           ) })}
+                          <p  className="pointDetails">Address: {selectedPlace.AddressLine1}</p>
+                          <p className="pointDetails"> Connector type: {selectedPlace.Type}</p>,
+                                    <p className="pointDetails"> Type: {selectedPlace.Title}</p>
+                                    <p className="pointDetails"> Code: {selectedPlace.Code}</p>
                 </div>
         ) : null}
         </ul> 

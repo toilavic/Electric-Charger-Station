@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactMapGL, {Marker, Popup, NavigationControl,GeolocateControl} from "react-map-gl";
-import data from '../data/test.json';
-import NavbarMap from './NavbarMap'
+import ReactMapGL, {Marker, Popup, NavigationControl} from "react-map-gl";
+// import data from '../data/test.json'
+import NavbarMap from './NavbarMap';
+import axios from 'axios';
+import constants from '../constants.json';
 import { BsLightningFill } from "react-icons/bs";
 import {
   Combobox,
@@ -27,13 +29,20 @@ export default class Map extends React.Component {
         width: '100vw',
         height: '100vh'
       },
-      data,
+      data: [],   
       onshowingInfoWindow : false,
       search: "",
       selectedPoint: false
     }
     }
 
+    componentDidMount = () => {
+      axios.get(constants.baseAddress + '/pluggers').then(result => {
+        this.setState({data: result.data.pluggers})
+      }).catch(error => {
+      console.error(error);
+    })
+    }
     // get maker event from parent
     async onMarkerClick(point) {
         this.props.onMarkerClick(point);
@@ -69,7 +78,7 @@ export default class Map extends React.Component {
 
     render() {
    
-    let filteredContacts = this.state.data.data.filter(
+    let filteredContacts = this.state.data.filter(
       (location) => {
         return location.chargerName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
       }
@@ -77,8 +86,7 @@ export default class Map extends React.Component {
 
     var selectedPlace = this.props.onSelectedPoint
 
-
-    return (
+      return (
       <div>
         {/* Render a map */}
         <ReactMapGL {...this.state.viewport} mapboxApiAccessToken={MAPBOX_TOKEN}
@@ -159,6 +167,8 @@ export default class Map extends React.Component {
         </ReactMapGL>
       </div>
     );
+    
+    
   }
     
 }
