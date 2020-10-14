@@ -36,7 +36,13 @@ export default class Map extends React.Component {
                                     <p className="pointDetails"> Type: {selectedPlace.Title}</p>
                                     <p className="pointDetails"> Code: {selectedPlace.Code}</p>
                 </div>
+                
         ) : null}
+        <footer className="footer small text-center text-white-50">
+          <div className="container">Please <b>remember the code</b> and then &nbsp;
+            <Link to="/verify"><b>Click here</b></Link> to go to select and proceed with the charger
+          </div>
+        </footer>
         </ul> 
         </nav>
       </IconContext.Provider>

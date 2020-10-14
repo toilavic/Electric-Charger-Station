@@ -24,7 +24,7 @@
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "Title": "Level 2 : Medium (Over 2kW)",
         "Code": 3432,
-        "Type": "22W",
+        "Type": "Normal",
         "Status": "Taken"
     },
     {
@@ -37,7 +37,7 @@
         "Comments": "Over 2 kW, usually non-domestic socket type",
         "Title": "Level 2 : Medium (Over 2kW)",
         "Code": 1234,
-        "Type": "150W",
+        "Type": "Fast",
         "Status": "Free"
     }
 ]

@@ -1,6 +1,13 @@
 import React from 'react';
-import {Link, Redirect } from "react-router-dom";
+import {Redirect } from "react-router-dom";
+import {toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 export default function Clock(props) {
+  toast.configure();
+  function notify() {
+    toast.success('Billing success, please check the payment from history')
+  }
 
     if (props.plugVerify === null)
     {
@@ -25,19 +32,24 @@ export default function Clock(props) {
 
   if(props.isAuthenticated) {
     return(
-    
-      <div style={{marginTop: '100px', marginLeft: '100px'}}>
-          <button onClick={() => props.history.goBack()}>Back</button>
-          <div>
-              <div >{getHour()}:{getMinute()}:{getSecond()}</div>
-              <button  onClick={props.start}>Start</button>
-              <button  onClick={props.stop}>Stop</button>
-              <div>Your payment is: {money} e</div>
+    <>
+      <header className="mastheadClock">
+          <div className="container d-flex h-100 align-items-center">
+            <div className="mx-auto text-center">
+            <h1 className="mx-auto my-0 text-uppercase">{getHour()}:{getMinute()}:{getSecond()}</h1>
+              <button className="btn btn-primary mx-auto" onClick={props.start}>Start</button>&nbsp;
+              <button className="btn btn-primary mx-auto" onClick={props.stop}>Stop</button>
+              <h2 className="text-black mb-4">Your payment is: {money} e</h2>
+              <button type="submit" className="btn btn-primary" data-toggle="button" aria-pressed="false" autoComplete="off" onClick={() => {
+          props.History();
+          notify();
+        }}   >
+              Billing
+              </button>
+            </div>
           </div>
-          <button type="submit" className="btn btn-default"
-                                onClick = {props.History}
-          >Submit</button>
-      </div>
+      </header>
+    </>
     )
   } else {
       alert('You need to login ');
@@ -45,6 +57,5 @@ export default function Clock(props) {
           <React.Fragment><Redirect to='/login' /></React.Fragment>
       )    
   }
- 
 } 
 }
