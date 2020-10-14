@@ -1,23 +1,20 @@
 const express = require('express');
 const app = express();
 const port = 4000;
-
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const db = require('./db');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 var Strategy = require('passport-http').BasicStrategy;
-var pluggers = require('./components/pluggers');
 
 const saltRounds = 4;
 
 app.use(bodyParser.json());
 app.use(cors())
-app.use('/pluggers', pluggers)
 
 passport.use(new Strategy((username, password, cb) => {
-  db.query('SELECT id, username, password FROM users WHERE username = ?', [username]).then(dbResults => {
+  db.query('SELECT id, username, password FROM user WHERE username = ?', [username]).then(dbResults => {
 
     if(dbResults.length == 0)
     {
@@ -40,7 +37,7 @@ passport.use(new Strategy((username, password, cb) => {
 
 
 
-app.get('/hello-unprotected',
+app.get('/hello-unprotected',        
         (req, res) => res.send('Hello World!'));
 
 app.get('/hello-protected',
@@ -49,39 +46,30 @@ app.get('/hello-protected',
 
 
 app.get('/users', (req, res) => {
-  db.query('SELECT id, username FROM users').then(results => {
+  db.query('SELECT id, username FROM user').then(results => {
     res.json(results);
   })
 })
 
-app.get('/history/:id',
-        // passport.authenticate('basic', { session: false }),
+app.get('/users/:id',
+        passport.authenticate('basic', { session: false }),
         (req, res) => {
-          db.query('SELECT username, time, location, energy, money  FROM history WHERE id = ?', [req.params.id]).then(results => {
+          db.query('SELECT id, username FROM user WHERE id = ?', [req.params.id]).then(results => {
             res.json(results);
           })
         });
 
-app.get('/users/:username',
-   passport.authenticate('basic', { session: false }),
- (req,res) => {
-  db.query('SELECT id, username FROM users WHERE username = ?', [req.params.username]).then (results => {
-    res.json(results);
-    console.log(results)
-  })
-})
-
 app.post('/users', (req, res) => {
   let username = req.body.username.trim();
   let password = req.body.password.trim();
-  let money = 0
+
   if((typeof username === "string") &&
      (username.length > 4) &&
      (typeof password === "string") &&
      (password.length > 6))
   {
     bcrypt.hash(password, saltRounds).then(hash =>
-      db.query('INSERT INTO users (username, password) VALUES (?,?)', [username, hash])
+      db.query('INSERT INTO user (username, password) VALUES (?,?)', [username, hash])
     )
     .then(dbResults => {
         console.log(dbResults);
@@ -95,39 +83,16 @@ app.post('/users', (req, res) => {
   }
 })
 
-app.post('/users/:id', (req,res) => {
-    db.query('INSERT INTO history (id, username, time, location, energy, money) VALUES (?,?,?,?,?,?)', [req.params.id, req.body.username, req.body.time, req.body.location, req.body.energy, req.body.money])
-})
 
 /* DB init */
 Promise.all(
   [
-      db.query(`CREATE TABLE IF NOT EXISTS users(
+      db.query(`CREATE TABLE IF NOT EXISTS user(
           id INT AUTO_INCREMENT PRIMARY KEY,
-          username VARCHAR(32) UNIQUE, 
-          password VARCHAR(256)
-      )`),
-      db.query(`CREATE TABLE IF NOT EXISTS history(
-          id INT,
           username VARCHAR(32),
-          time VARCHAR(55),
-          location VARCHAR(55),
-          energy FLOAT(3) DEFAULT '0',
-          money FLOAT(3)
-      )`),
-      db.query(`CREATE TABLE IF NOT EXISTS plugger(
-         id INT AUTO_INCREMENT PRIMARY KEY,
-         chargerName VARCHAR(255),
-         AddressLine1 VARCHAR(255),
-         Town VARCHAR(255),
-         Latitude DECIMAL(7,5),
-         Longitude DECIMAL(7,5),
-         Comments VARCHAR(255),
-         Title VARCHAR(255),
-         Type VARCHAR(255),
-         Code INT,
-         Status VARCHAR(255)
+          password VARCHAR(256)
       )`)
+      // Add more table create statements if you need more tables
   ]
 ).then(() => {
   console.log('database initialized');

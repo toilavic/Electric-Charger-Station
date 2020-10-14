@@ -102,7 +102,7 @@ class App extends Component {
             this.setState({ valid: false})
           }
           else {
-            this.setState({verify: final, valid: true})
+            this.setState({verify: final, valid: true, time: 0, money: 0, location: ''})
           }
         }
         else {
