@@ -1,6 +1,6 @@
 import React  from 'react';
 import '../css/styles.css'
-export default class Index extends React.Component {  
+export default class Index extends React.Component {
   
     render() {
         return (

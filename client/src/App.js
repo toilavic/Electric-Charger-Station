@@ -5,6 +5,7 @@ import constants from './constants.json';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import Auth from './components/Auth';
 import Map from './components/Map';
+import Instruction from './components/Instruction';
 import Register from './components/Register';
 import Verify from './components/Verify';
 import Clock from './components/Clock';
@@ -60,13 +61,6 @@ class App extends Component {
       console.log("Login failed");
     }
 
-    /* This function illustrates how some protected API could be accessed */
-    loadProtectedData = () => {
-      axios.get(constants.baseAddress + '/hello-protected', Auth.getAxiosAuth()).then(results => {
-        this.setState({ someData: results.data });
-      })
-    }
-
     handleShow() {
         this.setState({
             isShowButton: !this.state.isShowButton
@@ -89,7 +83,7 @@ class App extends Component {
           result = true;
         }
       });
-      return result; 
+      return result;
     }
     
     // this function will validate the digit, which is going to be caculate after process to charge
@@ -214,14 +208,15 @@ class App extends Component {
         return ( 
           
           <Router>
-            <Navbar  isAuthenticated={this.state.isAuthenticated} historyAccount = {this.historyAccount}/>
+            <Navbar isAuthenticated={this.state.isAuthenticated} historyAccount = {this.historyAccount}/>
                 <div>
                         <Route path="/" exact render={ routeProps => <Index {...routeProps}/>} isAuthenticated={this.state.isAuthenticated} />
+                        <Route path="/instruction" exact render={ routeProps => <Instruction {...routeProps}/>} />
                         <Route path="/history" exact render={ routeProps => <History historyData={this.state.historyData} 
                                                                                     isAuthenticated={this.state.isAuthenticated} 
                                                                                     username={this.state.userInfo} 
                                                                                     {...routeProps} />}/>
-                        <Route path="/register" exact render={ routeProps => <Register register={this.register} {...routeProps} />}/>
+                        <Route path="/register" isAuthenticated={this.state.isAuthenticated} exact render={ routeProps => <Register register={this.register} {...routeProps} />}/>
                         <Route path="/verify" render={ routeProps => <Verify valid={this.state.valid} 
                                                                               checkValid={this.checkValid} 
                                                                               verify={this.state.verify} 

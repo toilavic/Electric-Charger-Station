@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from "react-router-dom";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -58,7 +59,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Register(props) {
   const classes = useStyles();
-
+  if (props.isAuthenticated) {
+    return(<React.Fragment><Redirect to='/' /></React.Fragment>)
+  } else {
+    
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -120,4 +124,5 @@ export default function Register(props) {
       </Grid>
     </Grid>
   );
+  }
 }

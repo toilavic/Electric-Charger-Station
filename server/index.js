@@ -15,6 +15,7 @@ const saltRounds = 4;
 app.use(bodyParser.json());
 app.use(cors())
 app.use('/pluggers', pluggers)
+
 passport.use(new Strategy((username, password, cb) => {
   db.query('SELECT id, username, password FROM users WHERE username = ?', [username]).then(dbResults => {
 
@@ -54,7 +55,7 @@ app.get('/users', (req, res) => {
 })
 
 app.get('/history/:id',
-        // passport.authenticate('basic', { session: false }),
+        passport.authenticate('basic', { session: false }),
         (req, res) => {
           db.query('SELECT username, time, location, energy, money  FROM history WHERE id = ?', [req.params.id]).then(results => {
             res.json(results);
@@ -69,6 +70,7 @@ app.get('/users/:username',
     console.log(results)
   })
 })
+
 app.post('/users', (req, res) => {
   let username = req.body.username.trim();
   let password = req.body.password.trim();
@@ -93,12 +95,6 @@ app.post('/users', (req, res) => {
   }
 })
 
-app.put('/users/:id',(req, res) => {
-    db.query('UPDATE users SET money = ? WHERE users.id = ?', [req.body.money, req.params.id]).then(results => {
-      res.json(results)
-    }).catch(error => res.sendStatus(500))
-})
-
 app.post('/users/:id', (req,res) => {
     db.query('INSERT INTO history (id, username, time, location, energy, money) VALUES (?,?,?,?,?,?)', [req.params.id, req.body.username, req.body.time, req.body.location, req.body.energy, req.body.money])
 })
@@ -109,15 +105,14 @@ Promise.all(
       db.query(`CREATE TABLE IF NOT EXISTS users(
           id INT AUTO_INCREMENT PRIMARY KEY,
           username VARCHAR(32) UNIQUE, 
-          password VARCHAR(256),
-          money FLOAT(3)
+          password VARCHAR(256)
       )`),
       db.query(`CREATE TABLE IF NOT EXISTS history(
           id INT,
           username VARCHAR(32),
           time VARCHAR(55),
           location VARCHAR(55),
-          energy VARCHAR(255),
+          energy FLOAT(3) DEFAULT '0',
           money FLOAT(3)
       )`),
       db.query(`CREATE TABLE IF NOT EXISTS plugger(

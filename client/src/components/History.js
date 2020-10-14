@@ -2,7 +2,6 @@ import React from 'react';
 import { Redirect } from "react-router-dom";
 export default function History(props)
 {
-    console.log(props.historyData)
     if(props.isAuthenticated){
       var elmHistory = props.historyData.map((e,index) => {
       return <tr>
@@ -40,7 +39,7 @@ export default function History(props)
     {
             alert('You need to login ');
         return(
-          <React.Fragment><Redirect to='/login' /></React.Fragment>
+          <React.Fragment><Redirect to='/login'/></React.Fragment>
       )    
     }
 }
