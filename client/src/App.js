@@ -102,7 +102,7 @@ class App extends Component {
             this.setState({ valid: false})
           }
           else {
-            this.setState({verify: final, valid: true, time: 0, money: 0, location: ''})
+            this.setState({verify: final, valid: true})
           }
         }
         else {
@@ -184,6 +184,12 @@ class App extends Component {
        console.log(this.state.history)
    }
 
+    onClearClock = () => {
+      console.log('clear')
+      console.log(this.state.verify)
+      this.setState({second: 0, money: 0, energy: 0, verify: null, valid: false})
+    }
+
     // get history
     history = () => {
         var date = new Date();
@@ -208,7 +214,7 @@ class App extends Component {
         return ( 
           
           <Router>
-            <Navbar isAuthenticated={this.state.isAuthenticated} historyAccount = {this.historyAccount}/>
+            <Navbar isAuthenticated={this.state.isAuthenticated} onClearClock = {this.onClearClock} historyAccount = {this.historyAccount}/>
                 <div>
                         <Route path="/" exact render={ routeProps => <Index {...routeProps}/>} isAuthenticated={this.state.isAuthenticated} />
                         <Route path="/instruction" exact render={ routeProps => <Instruction {...routeProps}/>} />
@@ -234,6 +240,7 @@ class App extends Component {
                                                                             money={this.state.money} 
                                                                             plugVerify={this.state.plugVerify}
                                                                             History={this.history}
+                                                                            onClearClock = {this.onClearClock}
                                                                             isAuthenticated={this.state.isAuthenticated}
                                                                             {...routeProps}
                                                                             />}  /> 

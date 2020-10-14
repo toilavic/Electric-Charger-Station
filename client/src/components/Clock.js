@@ -42,6 +42,7 @@ export default function Clock(props) {
               <h2 className="text-black mb-4">Your payment is: {money} e</h2>
               <button type="submit" className="btn btn-primary" data-toggle="button" aria-pressed="false" autoComplete="off" onClick={() => {
           props.History();
+          props.onClearClock();
           notify();
         }}   >
               Billing

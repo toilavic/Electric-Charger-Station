@@ -30,7 +30,7 @@ export default class Map extends React.Component {
             {selectedPlace ? (
             // details info box
                 <div style={{borderRadius: '20%'}}>
-                        <h2 className="pointDetails">{selectedPlace.chargerName}</h2>
+                        <h2 className="pointDetails" style={{marginTop:'50px'}}>{selectedPlace.chargerName}</h2>
                           <p  className="pointDetails">Address: {selectedPlace.AddressLine1}</p>
                           <p className="pointDetails"> Connector type: {selectedPlace.Type}</p>,
                                     <p className="pointDetails"> Type: {selectedPlace.Title}</p>

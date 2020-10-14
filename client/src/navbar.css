@@ -10,7 +10,7 @@
   
   .menu-bars {
     margin-left: 1rem;
-    margin-top: 4rem;
+    margin-top: 6rem;
     font-size: 2rem;
     background: none;
   }
@@ -113,5 +113,5 @@
   .pointDetails {
     color: white;
     margin-left: 20px;
-    margin-bottom: 15px ;
+    margin-bottom: 10px ;
   }   

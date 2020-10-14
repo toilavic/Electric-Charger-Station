@@ -10,7 +10,7 @@ export default function Verify(props) {
                   <div className="mx-auto text-center">
                     <h2 className="text-white mb-4">Enter the code you get from the map</h2>
                     <form onSubmit={ props.choosePlugger }>
-                    <input type="text" name="digit" maxLength="4" className="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"/>&nbsp;
+                    <input type="text" disabled={props.valid} name="digit" maxLength="4" className="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"/>&nbsp;
                     </form>
                     &nbsp;<Link to='/clock'><button className="btn btn-primary mx-auto">Start charging</button></Link>
                   </div>
