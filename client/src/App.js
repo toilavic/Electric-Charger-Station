@@ -3,9 +3,7 @@ import './App.css';
 import axios from 'axios';
 import constants from './constants.json';
 import { BrowserRouter as Router, Route} from "react-router-dom";
-import Auth from './components/Auth';
 import Map from './components/Map';
-import Instruction from './components/Instruction';
 import Register from './components/Register';
 import Verify from './components/Verify';
 import Clock from './components/Clock';
@@ -15,7 +13,6 @@ import Login from './components/Login';
 import History from './components/History'
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
 
 class App extends Component {
     constructor(props) {
@@ -153,20 +150,8 @@ class App extends Component {
     }
 
     // register function
-    register = (event) => {
-      event.preventDefault();
-      axios.post(constants.baseAddress +'/users', {
-        username: event.target['username'].value,
-        password: event.target['password'].value,
-      })
-      .then(function (response) {
-        console.log(response);
-        alert('created success');
-        window.location = '/login';
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    register = () => {
+
     }
     // this function check if user have been logged in, so immedietly fetch data from DB to front-end request( HISTORY )
     checkData = () => {
@@ -188,6 +173,14 @@ class App extends Component {
       console.log('clear')
       console.log(this.state.verify)
       this.setState({second: 0, money: 0, energy: 0, verify: null, valid: false})
+    }
+
+    logOut = () => {
+      this.setState({
+        isAuthenticated : false,
+        valid: false
+      })
+      console.log('hello')
     }
 
     // get history
@@ -214,15 +207,14 @@ class App extends Component {
         return ( 
           
           <Router>
-            <Navbar isAuthenticated={this.state.isAuthenticated} onClearClock = {this.onClearClock} historyAccount = {this.historyAccount}/>
+            <Navbar isAuthenticated={this.state.isAuthenticated}  logOut = {this.logOut} onClearClock = {this.onClearClock} historyAccount = {this.historyAccount}/>
                 <div>
                         <Route path="/" exact render={ routeProps => <Index {...routeProps}/>} isAuthenticated={this.state.isAuthenticated} />
-                        <Route path="/instruction" exact render={ routeProps => <Instruction {...routeProps}/>} />
                         <Route path="/history" exact render={ routeProps => <History historyData={this.state.historyData} 
                                                                                     isAuthenticated={this.state.isAuthenticated} 
                                                                                     username={this.state.userInfo} 
                                                                                     {...routeProps} />}/>
-                        <Route path="/register" isAuthenticated={this.state.isAuthenticated} exact render={ routeProps => <Register register={this.register} {...routeProps} />}/>
+                        <Route path="/register" isAuthenticated={this.state.isAuthenticated} exact render={ routeProps => <Register redirectPathOnSuccess="/login"  register={this.register} {...routeProps} />}/>
                         <Route path="/verify" render={ routeProps => <Verify valid={this.state.valid} 
                                                                               checkValid={this.checkValid} 
                                                                               verify={this.state.verify} 

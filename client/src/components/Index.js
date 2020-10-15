@@ -1,4 +1,5 @@
 import React  from 'react';
+import { Link } from "react-router-dom";
 import '../css/styles.css'
 export default class Index extends React.Component {
   
@@ -17,7 +18,8 @@ export default class Index extends React.Component {
                   <div className="mx-auto text-center">
                     <h1 className="mx-auto my-0 text-uppercase">Electric Charger</h1>
                     <h2 className="text-white-50 mx-auto mt-2 mb-5">The Public registy of electric vehical charging based in Oulu</h2>
-                    <a className="btn btn-primary js-scroll-trigger" href="Map">Open Map</a>	&#160;
+                    <li className="nav-item"></li>
+                    <Link className="btn btn-primary js-scroll-trigger" to="/map">Open Map</Link>	&#160;
                     <a className="btn btn-primary js-scroll-trigger" href="#about">Get Started</a>
                   </div>
                 </div>

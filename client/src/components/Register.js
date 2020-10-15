@@ -12,6 +12,8 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import axios from 'axios';
+import constants from '../constants.json';
 
 function Copyright() {
   return (
@@ -58,6 +60,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Register(props) {
+
+      function register(event) {
+      event.preventDefault();
+      var username = event.target['username'].value;
+      var password = event.target['password'].value;
+      console.log(username.length)
+      if(username.length < 6 || password.length < 6 ) {
+        alert("Username or password have to be more than 6 characters ")
+      } else {
+        axios.post(constants.baseAddress +'/users', {
+          username: username,
+          password: password,
+      })
+      .then(function (response) {
+          console.log(response);
+          alert('created success');
+          props.history.push(props.redirectPathOnSuccess);
+      })
+      .catch(function (error) {
+          console.log(error);
+      });
+      }
+    }
+
   const classes = useStyles();
   if (props.isAuthenticated) {
     return(<React.Fragment><Redirect to='/' /></React.Fragment>)
@@ -77,7 +103,7 @@ export default function Register(props) {
           </Typography>
 
           {/* form */}
-          <form className={classes.form} noValidate onSubmit={ props.register }>
+          <form className={classes.form} noValidate onSubmit={ register }>
             <TextField
               variant="outlined"
               margin="normal"

@@ -13,8 +13,6 @@ export default class Map extends React.Component {
     
   render() {
       var selectedPlace = this.props.onReceivePoint;
-      // console.log(point)
-      console.log(selectedPlace)
   return (
     <div>
       <IconContext.Provider value={{ color: '#fff' }}>
